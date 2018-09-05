@@ -63,6 +63,8 @@
                             </div>
                         </div>
                     </form>
+                    <a href="/login/github"  class="btn btn-default btn-md">Log in with Github</a>
+                    <a href="/login/google"  class="btn bg-default btn-md">Log in with Google</a>
                 </div>
             </div>
         </div>

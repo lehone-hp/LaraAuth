@@ -11,10 +11,13 @@
 |
 */
 
+Auth::routes();
+
+Route::get('login/{provider}',          'Auth\SocialAccountController@redirectToProvider');
+Route::get('login/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');
+
 Route::get('/', function () {
     return view('welcome');
-});
-
-Auth::routes();
+})->middleware('auth');
 
 Route::get('/home', 'HomeController@index')->name('home');
